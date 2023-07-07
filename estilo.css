@@ -1,4 +1,4 @@
-.calculadora{
+/*.calculadora{
   display:block;
   margin:0 auto;
   padding:20px;
@@ -31,4 +31,152 @@
   background-color:#fff;
   border-radius: 25px;
   overflow-y: scroll;
+}
+*/
+@import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
+
+:root {
+  --primary-color: #17171C; 
+  --secondary-color: #008B8B;
+  --dark-button: #2E2F38;
+  --text: 'Work Sans', sans-serif;
+}
+
+* {
+  font-family: var(--text);
+}
+
+body {
+  background-color: var(--primary-color);
+}
+
+/*  ------> Switch <-------  */
+.switch {
+  width: 60px;
+  height: 30px;
+  background: #343d5b;
+  border-radius: 1000px;
+  align-items: center;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+}
+
+.switch::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  justify-content: center;
+  background: #f1f1f1;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  transition: .3s ease all;
+  box-shadow: 0px 0px 2px 2px rgba(0,0,0,.2);
+}
+.switch:active {
+  background: #008B8B;
+  color: dark;
+  & .switch::after {
+    right: 0;
+    left: unset;
+  }
+}
+
+.span{
+  width: 20px;
+  height: 20px;
+  line-height: 30px;
+  display: block;
+  background: none;
+  color: #fff;
+}
+
+table {
+  background-color: var(--primary-color);
+  display: flex;
+  width: 1300px;
+  flex-direction: column;
+  position: flex-end;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: stretch;
+}
+
+.main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%); 
+}
+
+.display {
+  width: 1280px;
+  height: 90px;
+  padding-right: 6px;
+  text-align: right;
+
+  font-size: 96px;
+  color: white;
+  margin: 5px;
+  outline: none;
+  
+  border-radius: 25px;
+  border: 1px solid var(--dark-button);
+  background-color: var(--primary-color);
+}
+
+.operator, .number {
+appearance: none;
+-webkit-appearance: none;
+-moz-appearance: none;
+-ms-appearance: none;
+-o-appearance: none;
+padding: 0;
+  width: 320px;
+  height: 72px;
+
+  display: flex;
+padding: 12px;
+justify-content: center;
+align-items: center;
+
+  
+  font-size: 22px;
+  margin: 2;
+  color: white;
+
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  background-color: var(--dark-button);
+
+  transition: 400ms;
+}
+
+.operator:hover, .number:hover {
+  cursor: pointer;
+  background-color: var(--secondary-color);
+}
+
+/* Responsive mobile */
+@media only screen and (max-width: 768px) {
+  body {
+      padding: 25px 15px 0px 15px;
+  }
+  
+  header {
+    height: 60px;
+  }
 }
