@@ -2,6 +2,7 @@
 
 :root {
   --primary-color: #17171C; 
+  --light-color: #F1F2F3;
   --secondary-color: #008B8B;
   --dark-button: #2E2F38;
   --text: 'Work Sans', sans-serif;
@@ -14,7 +15,9 @@
 body {
   background-color: var(--primary-color);
 }
-
+body .light {
+  background-color: var(--light-color);
+}
 /*  ------> Switch <-------  */
 .switch {
   width: 60px;
@@ -51,6 +54,11 @@ body {
 .switch:active {
   background: #008B8B;
   color: dark;
+}
+
+.switch:active .switch::after {
+  right: 0;
+  left: unset;
 }
 
 .span{
@@ -103,11 +111,6 @@ form {
 }
 
 .operator, .number {
-appearance: none;
--webkit-appearance: none;
--moz-appearance: none;
--ms-appearance: none;
--o-appearance: none;
 padding: 0;
   width: 320px;
   height: 72px;
@@ -132,16 +135,53 @@ align-items: center;
 
 .operator:hover, .number:hover {
   cursor: pointer;
-  background-color: var(--secondary-color);
+  background-color: #4E505F;
 }
 
-/* Responsive mobile */
-@media only screen and (max-width: 768px) {
-  body {
-      padding: 25px 15px 0px 15px;
-  }
-  
-  header {
-    height: 60px;
-  }
+.operator-start:hover, .operator-end:hover {
+  cursor: pointer;
 }
+
+.operator-start {
+  width: 320px;
+  height: 72px;
+
+  display: flex;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+
+  
+  font-size: 22px;
+  margin: 2;
+  color: white;
+
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  background-color: #4E505F;
+
+  transition: 400ms;
+}
+
+.operator-end {
+  width: 320px;
+  height: 72px;
+
+  display: flex;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+
+  
+  font-size: 22px;
+  margin: 2;
+  color: white;
+
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  background-color: #4B5EFC;
+  transition: 400ms;
+}
+/* Responsive mobile */
