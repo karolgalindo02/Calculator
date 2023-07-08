@@ -1,38 +1,3 @@
-/*.calculadora{
-  display:block;
-  margin:0 auto;
-  padding:20px;
-  background-color:#2980b9;
-  width:300px;
-  height:500px;
-  border-radius: 25px;
-}
-.calculadora td button{
-  display:block;
-  width:70px;
-  height: 70px;
-  font-size: 25px;
-}
-#creditos{
-  display:block;
-  padding-top:20px;
-  color:#fff;
-  text-align: center;
-  width:300px;
-}
-#resultado{
-  display:block;
-  text-align: center;
-  font-size: 40px;
-  margin-bottom: 50px;
-  width:300px;
-  height: 100px;
-  line-height: 100px;
-  background-color:#fff;
-  border-radius: 25px;
-  overflow-y: scroll;
-}
-*/
 @import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
 
 :root {
@@ -58,7 +23,11 @@ body {
   border-radius: 1000px;
   align-items: center;
   border: none;
-  position: relative;
+  position: absolute;
+  
+  left: 50%;
+  
+  transform: translateX(-50%);
   cursor: pointer;
   display: flex;
   outline: none;
@@ -82,10 +51,6 @@ body {
 .switch:active {
   background: #008B8B;
   color: dark;
-  & .switch::after {
-    right: 0;
-    left: unset;
-  }
 }
 
 .span{
