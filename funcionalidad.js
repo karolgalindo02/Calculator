@@ -1,13 +1,25 @@
-const btnSwitch = document.querySelector("#switch")
+const label = document.querySelector('.switch-label')
+const modeSwitch = document.getElementById('switch');
+const switchToggle = document.getElementById('.switch-toggle');
+const body = document.body;
 const ENTER_KEY = "Enter"
 const DELETE_KEY = "Delete"
 const display = document.querySelector('.display') //selecting display
 const numbers = document.querySelectorAll('.number') //selecting all numbers
 const operators = document.querySelectorAll('.operator, .operator-start, .operator-end') //selecting all operators
 
-btnSwitch.addEventListener('click', () => {
-    document.body.classList.toggle('light');
-    btnSwitch.classList.toggle('active');
+//turn light mode
+modeSwitch.addEventListener('change', function() {
+  body.classList.toggle('light-mode');
+});
+
+//change name if label is checked
+modeSwitch.addEventListener('change', function() {
+  if (modeSwitch.checked) {
+    label.textContent = 'Dark Mode';
+  } else {
+    label.textContent = 'Light Mode';
+  }
 });
 
 function insert(num) {
@@ -140,10 +152,10 @@ function calculate(event) {
         insert(buttonValue) 
 
     }
-    else if (buttonValue == '=') {
+    else if (buttonValue == ENTER_KEY ) {
         equal() //calling the equal() function
     }
-    else if (buttonValue == "⌫") {
+    else if (buttonValue == DELETE_KEY ) {
         back() //calling the back() function
     }
     else if (buttonValue == "C") {
