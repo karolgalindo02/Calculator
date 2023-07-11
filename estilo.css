@@ -23,6 +23,7 @@ body {
   flex-direction: column;
   position: flex-end;
   align-items: flex-start;
+  border-radius: 25px;
 }
 
 form {
@@ -211,6 +212,7 @@ body.light-mode .switch-label {
 	transform: translateX(20px);
 }
 
+
 /* Responsive Tablet */
 @media (max-width: 1024px) {
   .body {
@@ -229,22 +231,21 @@ body.light-mode .switch-label {
   }
 
   .table {
-    width: 90vw;
+    width: autos;
     border-spacing: 4%;
-    border-radius: 20px;
   }
 
   .display {
+    width: 72vw;
     left: 15vw;
-    width: 60vw;
   }
 
   .operator-start,
   .operator-end,
   .operator,
   .number {
-    width: 15vw;
-    height: 15vw;
+    width: 18vw;
+    height: 18vw;
     padding: 8px 7.5px 8px 8px;
     flex-direction: column;
     justify-content: center;
@@ -276,14 +277,11 @@ body.light-mode .switch-label {
     transform: translateX(-25%) translateY(-25%);     
     padding: 5%;
     width: 335px;
-    flex-direction: column;
-    align-items: flex-start;
   }
  
   .table{
     width: 86vw;
     border-spacing: 6%;
-    border-radius: 25px;
   }
   
   .display {
