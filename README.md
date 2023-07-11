@@ -1,4 +1,4 @@
-# Calculadora con Javascript👩🏻‍💻
+# Calculadora con Javascript 👩🏻‍💻
 
 Requerimientos:
 - Realizar operaciones funcionales con Javascript
