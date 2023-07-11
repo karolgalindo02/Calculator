@@ -152,10 +152,10 @@ function calculate(event) {
         insert(buttonValue) 
 
     }
-    else if (buttonValue == ENTER_KEY ) {
+    else if (buttonValue == "=" ) {
         equal() //calling the equal() function
     }
-    else if (buttonValue == DELETE_KEY ) {
+    else if (buttonValue == "⌫" ) {
         back() //calling the back() function
     }
     else if (buttonValue == "C") {
