@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Awesome Calculator</title>
-<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-<link rel="shortcut icon" href="icon.png">
-<link type="text/css" href="estilo.css" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora con JavaScript</title>
+  <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+  <link rel="shortcut icon" href="icon.png">
+  <link type="text/css" href="estilo.css" rel="stylesheet">
 </head>
 <body>
-  <button class="switch" id="switch">
-      <span><i class="fas fa-sun"></i></span>
-      <span><i class="fas fa-moon"></i></span>      
-  </button>
   <div class="main">
       <form name="form">
+          <span class="display-operation"></span>
           <input class="display" id="display" value="0" disabled>
       </form>
-    <table>
+    <table class="table">
       <tr>
         <td><input type="button" class="operator-start" value="C" id="clean"></td>
-        <td><input type="button" class="operator-start" value="±"></td>
+        <td><input type="button" class="operator-start" value="⌫"></td>
         <td><input type="button" class="operator-start" value="%"></td>
         <td><input type="button" class="operator-end" value="/"></td>
       </tr>
@@ -44,11 +43,16 @@
       <tr>
         <td><input type="button" class="operator" value="."></td>
         <td><input type="button" class="number" value="0"></td>
-        <td><input type="button" class="operator" value="⌫"></td>
+        <td><input type="button" class="number" value="00"></td>
         <td><input type="button" class="operator-end" value="="></td>
       </tr>
     </table>
   </div>
+	<div class="switch-container">
+		<label for="switch" id="switch-label" class="switch-label">Light Mode</label>
+		<input type="checkbox" id="switch" class="switch-input">
+		<div class="switch-toggle"></div>
+	</div>
 <script src="funcionalidad.js"></script>
 </body>
 </html>
